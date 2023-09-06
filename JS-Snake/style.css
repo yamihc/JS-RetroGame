@@ -1,0 +1,21 @@
+#area {
+    display: block;
+    margin: auto;
+}
+
+#stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+#stats p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#stats button {
+    padding: 95%;
+}
+
