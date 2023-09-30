@@ -7,20 +7,19 @@ The purpose of this website is to serve as a practice platform for HTML / CSS / 
 
 ## Contenu
 
+30/09/2024 - Amélioration du script, réglage et enregistrement des paramètres et des meilleurs scores (localStorage), bouton de redémarrage.
 06/09/2024 - Un snake jouable.
 
 ## roadmap
 
-- Une page de paramêtre pour le Snake
-- remplacer le 'confirm' par un bouton de redémarrage
-- des modes de jeux.
+- un mastermind en Typescript
 
 
 ## A venir ?
 
+- des modes de jeux pour le Snake, dans une version refaite de zéro
 - une belle page d'accueil pleine de CSS
 - un tetris
-- un mastermind
 - un quarto
 - une IA pour le quarto (algo MinMax)
 
