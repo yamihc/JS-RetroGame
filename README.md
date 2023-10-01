@@ -7,8 +7,9 @@ The purpose of this website is to serve as a practice platform for HTML / CSS / 
 
 ## Contenu
 
-30/09/2024 - Amélioration du script, réglage et enregistrement des paramètres et des meilleurs scores (localStorage), bouton de redémarrage.
-06/09/2024 - Un snake jouable.
+01/10/2023 - limite dimensions du jeu à celles de l'écran, bouton plein écran, pointeur invisible pendant la partie, retour en arrière impossible.
+30/09/2023 - Amélioration du script, réglage et enregistrement des paramètres et des meilleurs scores (localStorage), bouton de redémarrage.
+06/09/2023 - Un snake jouable.
 
 ## roadmap
 

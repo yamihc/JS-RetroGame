@@ -36,9 +36,9 @@ let nextMove = [];
 let score = 0;
 let chrono = 0;
 
-let colorBord = "#FA0000", colorSnake = "#0000AA", colorCible = "#00AA00", colorFond = "#F0F0F0";
+let colorBord = "#C13E3E", colorSnake = "#E9ED2C", colorCible = "#44F344", colorFond = "#7B47FF";
 
-
+let snakeVersion = localStorage.getItem('Yamihc_Snake-Version');
 let hallOfFame = localStorage.getItem('Yamihc_Snake-Score');
 let snakeConfig = localStorage.getItem('Yamihc_Snake-Setting');
 
@@ -53,12 +53,10 @@ if (!hallOfFame) {
         {pseudo: "Advenced", score: 10, taille: 20, temps: 100000},
         {pseudo: "Newbie", score: 5, taille: 10, temps: 50000}
     ] ;
-    document.getElementById('consignes').showModal();
-    document.getElementById('btn-close-consignes').onclick = () => document.getElementById('consignes').close();
+   
 } else {
     hallOfFame = JSON.parse(hallOfFame);
 }
-
 
 if (snakeConfig) {
     snakeConfig = JSON.parse(snakeConfig);
@@ -72,12 +70,26 @@ if (snakeConfig) {
     colorFond = snakeConfig.colrFond;
 }
 
+if (!snakeVersion) {
+    document.getElementById('consignes').showModal();
+    document.getElementById('btn-close-consignes').onclick = () => { document.getElementById('consignes').close() }
+    localStorage.setItem('Yamihc_Snake-Version','1.1');
+} else {
+    snakeVersion = JSON.parse(snakeVersion);
+    if (snakeVersion != '1.1') {
+        document.getElementById('consignes').showModal();
+        document.getElementById('btn-close-consignes').onclick = () => { document.getElementById('consignes').close() }
+        localStorage.setItem('Yamihc_Snake-Version','1.1');
+    }
+}
 
 
 function printBloc(iX, iY, color) {
     ctx.fillStyle = color;
     ctx.fillRect(iX * dimS, iY * dimS, dimS, dimS);
 }
+
+
 
 let cible = {
     X : 0 ,
@@ -158,14 +170,25 @@ function moveSnake(move) {
 
 
 function initDims() {
+
     const a = 12/1400;
     const b = 4 - a * 400;
     dimS = Math.round(a*window.innerWidth+b);
+    while ((window.innerHeight - 90) < (rangeHaut * dimS)) {
+        rangeHaut--;
+    } 
+    while (window.innerWidth < (rangeLarg * dimS)) {
+        rangeLarg--;
+    } 
     canvas.height = hauteur();
     canvas.width = largeur();
 };
 
-window.addEventListener('resize', () => {initDims();} )
+window.addEventListener('resize', () => {
+    rangeLarg = 101;
+    rangeHaut = 51;
+    initDims();
+})
 
 
 function initGame() {
@@ -309,6 +332,8 @@ function nouvoHero(rg,sc,lg,ch) {
 function gameStop() {
     if (testList(xSnake, ySnake, snakeBodyX, snakeBodyY ) || testBord()) {
         clearInterval(moteur);
+
+        canvas.style.cursor = 'auto';
         
         if (score > 0) {
             let rang = testScore(score,snakeBodyX.length, chrono); 
@@ -377,21 +402,24 @@ function printSnake() {
 
 
 window.addEventListener("keydown", (e)=>{
+
+    canvas.style.cursor = 'none';
     
     switch (e.key) {
         case "ArrowUp" :
-            nextMove.push("up");
+            if (nextMove[0] != "down") { nextMove.push("up") }
            break;
         case "ArrowDown" :
-            nextMove.push("down");
+            if (nextMove[0] != "up") { nextMove.push("down") }
             break;
         case "ArrowLeft" :
-            nextMove.push("left");
+            if (nextMove[0] != "right") { nextMove.push("left") }
             break;
         case "ArrowRight" :
-            nextMove.push("right");
+            if (nextMove[0] != "left") {nextMove.push("right") }
             break;
         default:
+            canvas.style.cursor = 'auto';
             nextMove.push("stop");
             start = false;
     }
@@ -431,10 +459,10 @@ document.getElementById('btn-reset-setting').onclick = () => {
     rangeHaut = 51 ;
     freq = 50 ;
 
-    colorBord = "#FA0000"; 
-    colorSnake = "#0000AA";
-    colorCible = "#00AA00"; 
-    colorFond = "#F0F0F0";
+    colorBord = "#C13E3E"; 
+    colorSnake = "#E9ED2C";
+    colorCible = "#44F344"; 
+    colorFond = "#7B47FF";
 
     updSetting();
     initGame();
@@ -586,5 +614,21 @@ function toogleHallOfFame() {
     }
 }
 
+function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+      document.getElementById('btn-full-scr').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
+      <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
+    </svg>` ;
+      
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+        document.getElementById('btn-full-scr').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen" viewBox="0 0 16 16">
+        <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+      </svg>` ;
+      }
+    }
+}
 
 initGame();
