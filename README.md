@@ -1,19 +1,27 @@
 # Bienvenue / Welcomme
 
-L'objectif de ce site est d'être un support de pratique du HTML / CSS / JavaScript sur mon temps libre, en utilisant des jeux comme prétexte.
+L'objectif de ce site est d'être un support de pratique du HTML / CSS / JavaScript / Typescript / React sur mon temps libre, en utilisant des jeux comme prétexte.
 
-The purpose of this website is to serve as a practice platform for HTML / CSS / JS pratic, using games as a pretext.
+*The purpose of this website is to serve as a practice platform for HTML / CSS / JS / TS / React pratic, using games as a pretext.*
+
+
+Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame/
 
 
 ## Contenu
 
-01/10/2023 - limite dimensions du jeu à celles de l'écran, bouton plein écran, pointeur invisible pendant la partie, retour en arrière impossible.
-30/09/2023 - Amélioration du script, réglage et enregistrement des paramètres et des meilleurs scores (localStorage), bouton de redémarrage.
+11/10/2023 - Mise en ligne d'un Mastermind v0.8, non pas en Typescript, mais en React, avec l'utilisation ~~hasardeuse~~ expérimentale des framework Tailwind CSS et Radix-UI. Ajout d'informations supplémentaire sur le jeux sur la page d'accueil.
+01/10/2023 - Snake v1.1 : limite dimensions du jeu à celles de l'écran, bouton plein écran, pointeur invisible pendant la partie, retour en arrière impossible.
+30/09/2023 - Snake v1 : Amélioration du script, réglage et enregistrement des paramètres et des meilleurs scores (localStorage), bouton de redémarrage.
 06/09/2023 - Un snake jouable.
+
 
 ## roadmap
 
-- un mastermind en Typescript
+#### MasterMind :
+- améliorer le rendu visuel du MasgterMind
+- utiliser le *local storage* pour enregistrer automatiquement une partie en cours
+- attendre la validation du joueur avant d'afficher la solution lorsqu'elle est trouvée
 
 
 ## A venir ?

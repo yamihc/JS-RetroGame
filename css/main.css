@@ -20,11 +20,57 @@ main {
 
 .game-link {
     margin: 10px;
+
 }
 
 .game-link img {
     width: 200px;
     height: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-link img:hover {
+    transform: translateY(-10px);
+  }
+
+.game-link .info {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+    & h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    & p {
+        color: #666;
+    }
+    
+    & p:nth-of-type(1) {
+        text-align: center;
+        margin-top: 2px;
+        margin-bottom: 10px;
+    }
+    & p:nth-of-type(2) {
+        margin-left: 10px;
+    }
+
+    & ul {
+        list-style-type: none;
+    }
+
+    & ul li {
+        color: #333;
+    }
+}
+
+.game-link:hover .info {
+    display: block;
+    margin-top: 6px;
 }
 
 footer {
@@ -42,7 +88,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.linkedin-icon {
+.footer-icon {
     vertical-align: middle;
     margin-left: 5px;
 }
