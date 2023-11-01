@@ -567,8 +567,8 @@ function isBetween1330And1530() {
     const start = new Date(now);
     const end = new Date(now);
   
-    start.setHours(13, 30, 0, 0); // Définit l'heure de début à 13h30
-    end.setHours(15, 30, 0, 0);  // Définit l'heure de fin à 15h30
+    start.setHours(15, 30, 0, 0); // Définit l'heure de début à 13h30
+    end.setHours(17, 30, 0, 0);  // Définit l'heure de fin à 15h30
   
     return now >= start && now <= end;
 }
