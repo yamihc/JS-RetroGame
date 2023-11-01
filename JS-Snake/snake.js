@@ -338,7 +338,7 @@ function gameStop() {
         if (score > 0) {
             let rang = testScore(score,snakeBodyX.length, chrono); 
     
-            if (rang <= 12) {
+            if (rang < 12) {
                 nouvoHero(rang, score, snakeBodyX.length, chrono);
             } else {
                 makeHallofFame(hallOfFame) ;
@@ -562,11 +562,22 @@ function modaleSetup() {
 
 }
 
+function isBetween1330And1530() {
+    const now = new Date();
+    const start = new Date(now);
+    const end = new Date(now);
+  
+    start.setHours(13, 30, 0, 0); // Définit l'heure de début à 13h30
+    end.setHours(15, 30, 0, 0);  // Définit l'heure de fin à 15h30
+  
+    return now >= start && now <= end;
+}
+
 
 function mkHeroTable(hero) {
     
     const newPPseudo = document.createElement('td');
-    newPPseudo.innerText = hero.pseudo ;
+    newPPseudo.innerText = isBetween1330And1530() && hero.pseudo.toLowerCase() == /^je.*ll$/  ? 'Loïc' : hero.pseudo ;
     
     const newPScore = document.createElement('td');
     newPScore.innerText = hero.score ;
