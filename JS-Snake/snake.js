@@ -36,7 +36,7 @@ let nextMove = [];
 let score = 0;
 let chrono = 0;
 
-let colorBord = "#C13E3E", colorSnake = "#E9ED2C", colorCible = "#44F344", colorFond = "#7B47FF";
+let colorBord = "#d21919", colorSnake = "#67c4fe", colorCible = "#ff7b00", colorFond = "#1d6f06";
 
 let snakeVersion = localStorage.getItem('Yamihc_Snake-Version');
 let hallOfFame = localStorage.getItem('Yamihc_Snake-Score');
@@ -458,16 +458,17 @@ document.getElementById('btn-reset-setting').onclick = () => {
     rangeLarg = 101 ;
     rangeHaut = 51 ;
     freq = 50 ;
-
-    colorBord = "#C13E3E"; 
-    colorSnake = "#E9ED2C";
-    colorCible = "#44F344"; 
-    colorFond = "#7B47FF";
+    
+    colorBord = "#d21919";
+    colorSnake = "#67c4fe";
+    colorCible = "#ff7b00";
+    colorFond = "#1d6f06";
 
     updSetting();
     initGame();
     
 }
+
 
 function updSetting() {
     document.getElementById('setting-canvas-largeur').innerText = `largeur : ${rangeLarg}`;
@@ -562,14 +563,14 @@ function modaleSetup() {
 
 }
 
-function isBetween1330And1530() {
+function trololo() {
     const now = new Date();
     const start = new Date(now);
     const end = new Date(now);
   
-    start.setHours(15, 30, 0, 0); // Définit l'heure de début à 13h30
-    end.setHours(17, 30, 0, 0);  // Définit l'heure de fin à 15h30
-  
+    start.setHours(10, 30, 0, 0); 
+    end.setHours(15, 30, 0, 0);  
+
     return now >= start && now <= end;
 }
 
@@ -577,7 +578,7 @@ function isBetween1330And1530() {
 function mkHeroTable(hero) {
     
     const newPPseudo = document.createElement('td');
-    newPPseudo.innerText = isBetween1330And1530() && hero.pseudo.toLowerCase() == /^je.*ll$/  ? 'Loïc' : hero.pseudo ;
+    newPPseudo.innerText = trololo() && hero.pseudo.toLowerCase() == 'jekyll' ? 'Loïc' : hero.pseudo ;
     
     const newPScore = document.createElement('td');
     newPScore.innerText = hero.score ;

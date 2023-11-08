@@ -44,15 +44,26 @@ button {
     border-radius: 5px;
     background-color: #3498db;
     color: #fff;
+    box-shadow: 0 2px 4px rgba(80, 13, 13, 0.1); 
+    transition: background-color 0.3s ease-in-out; 
+}
+
+a {
+    padding: 18px 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3498db;
+    color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     transition: background-color 0.3s ease-in-out; 
 }
 
-button:hover {
+
+button:hover, a:hover {
     background-color: #2085c9;
 }
 
-button svg {
+button svg, a svg {
     vertical-align: middle;
     width: 1.5em;
     height: 1.5em;
