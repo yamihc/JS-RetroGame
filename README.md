@@ -10,6 +10,7 @@ Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame
 
 ## Contenu
 
+28/11/2023 - Première version du Tetris, fait en Preact avec TypeScript. Jouable, mais aucune option. 
 31/10/2023 - Mastermind v1, réglage des paramètres dans une modale, ajout des explications, localstorage automatique de la partie en cours
 16/10/2023 - Mastermind 0.85, la combinaison, n'est testé qu'à la validation du joueur, amélioration du CSS. Le code source du mastermind est diponible dans un dépot parent.
 11/10/2023 - Mise en ligne d'un Mastermind v0.8, non pas en Typescript, mais en React, avec l'utilisation ~~hasardeuse~~ expérimentale des framework Tailwind CSS et Radix-UI. Ajout d'informations supplémentaire sur le jeux sur la page d'accueil.
@@ -20,18 +21,19 @@ Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame
 
 ## Roadmap
 
--peut être le tetris...
+- ajout de fonctionnalité pour le tetris, présentation globale, score, affichage prochain tetramino, etc.
 
 
 ## code source des projets REACT
 
--MasterMind : https://github.com/yamihc/src_MasterMind.git
+- Snake : https://github.com/yamihc/JS-RetroGame/tree/main/JS-Snake
+- MasterMind : https://github.com/yamihc/src_MasterMind.git
+- Tetris : https://github.com/yamihc/src_Tetris
 
 
 ## A venir ?
 
 - des modes de jeux pour le Snake, dans une version refaite de zéro
-- un tetris
 - un quarto
 - une IA pour le quarto (algo MinMax)
 
