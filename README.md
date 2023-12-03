@@ -1,8 +1,8 @@
 # Bienvenue / Welcomme
 
-L'objectif de ce site est d'être un support de pratique du HTML / CSS / JavaScript / Typescript / React sur mon temps libre, en utilisant des jeux comme prétexte.
+L'objectif de ce site est d'être un support de pratique du HTML / CSS / JavaScript / Typescript / React / Preact sur mon temps libre, en utilisant des jeux comme prétexte.
 
-*The purpose of this website is to serve as a practice platform for HTML / CSS / JS / TS / React pratic, using games as a pretext.*
+*The purpose of this website is to serve as a practice platform for HTML / CSS / JS / TS / React / Preact pratic, using games as a pretext.*
 
 
 Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame/
@@ -10,6 +10,7 @@ Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame
 
 ## Contenu
 
+03/11/2023 - Changement des dimensions du tetris, ajout d'une mécanique d'acceleration. Evolution du Snake, changement dans la gestion du resize, pas entièrement testée, potentiellement instable.
 28/11/2023 - Première version du Tetris, fait en Preact avec TypeScript. Jouable, mais aucune option. 
 31/10/2023 - Mastermind v1, réglage des paramètres dans une modale, ajout des explications, localstorage automatique de la partie en cours
 16/10/2023 - Mastermind 0.85, la combinaison, n'est testé qu'à la validation du joueur, amélioration du CSS. Le code source du mastermind est diponible dans un dépot parent.
@@ -22,6 +23,8 @@ Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame
 ## Roadmap
 
 - ajout de fonctionnalité pour le tetris, présentation globale, score, affichage prochain tetramino, etc.
+- une version du tetris avec affichage via des composants à la place du canvas.
+- refaire l'accueil du site en React/Preact MUI, avec l'ajout d'une section présentation/CV
 
 
 ## code source des projets REACT

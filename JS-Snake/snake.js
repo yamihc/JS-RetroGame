@@ -41,6 +41,7 @@ let colorBord = "#d21919", colorSnake = "#67c4fe", colorCible = "#ff7b00", color
 let snakeVersion = localStorage.getItem('Yamihc_Snake-Version');
 let hallOfFame = localStorage.getItem('Yamihc_Snake-Score');
 let snakeConfig = localStorage.getItem('Yamihc_Snake-Setting');
+const CURRENT_VERSION = "1.2";
 
 if (!hallOfFame) {
     hallOfFame = [
@@ -73,13 +74,13 @@ if (snakeConfig) {
 if (!snakeVersion) {
     document.getElementById('consignes').showModal();
     document.getElementById('btn-close-consignes').onclick = () => { document.getElementById('consignes').close() }
-    localStorage.setItem('Yamihc_Snake-Version','1.1');
+    localStorage.setItem('Yamihc_Snake-Version',CURRENT_VERSION);
 } else {
     snakeVersion = JSON.parse(snakeVersion);
-    if (snakeVersion != '1.1') {
+    if (snakeVersion != CURRENT_VERSION) {
         document.getElementById('consignes').showModal();
         document.getElementById('btn-close-consignes').onclick = () => { document.getElementById('consignes').close() }
-        localStorage.setItem('Yamihc_Snake-Version','1.1');
+        localStorage.setItem('Yamihc_Snake-Version',CURRENT_VERSION);
     }
 }
 
@@ -175,10 +176,12 @@ function initDims() {
     const b = 4 - a * 400;
     dimS = Math.round(a*window.innerWidth+b);
     while ((window.innerHeight - 90) < (rangeHaut * dimS)) {
-        rangeHaut--;
+        //rangeHaut--;
+        dimS--
     } 
     while (window.innerWidth < (rangeLarg * dimS)) {
-        rangeLarg--;
+        //rangeLarg--;
+        dimS--
     } 
     canvas.height = hauteur();
     canvas.width = largeur();
@@ -514,6 +517,7 @@ function updSetting() {
     colors[3].onchange = () => { colorFond = colors[3].value}
 
 }
+
 
 document.getElementById('setting-vitesse').onchange = (e) => {
     switch (e.target.value) {
