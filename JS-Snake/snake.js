@@ -90,8 +90,6 @@ function printBloc(iX, iY, color) {
     ctx.fillRect(iX * dimS, iY * dimS, dimS, dimS);
 }
 
-
-
 let cible = {
     X : 0 ,
     Y : 0 ,
@@ -111,8 +109,6 @@ let cible = {
         }
     }
 }
-
-
 
 function paintMap() {
     
@@ -149,7 +145,6 @@ function testList(x, y , listX, listY) {
     return ret ;
 }
 
-
 function moveSnake(move) {
     switch(move) {
         case "up" : 
@@ -168,7 +163,6 @@ function moveSnake(move) {
             break ;
     }
 }
-
 
 function initDims() {
 
@@ -572,8 +566,8 @@ function trololo() {
     const start = new Date(now);
     const end = new Date(now);
   
-    start.setHours(10, 30, 0, 0); 
-    end.setHours(15, 30, 0, 0);  
+    start.setHours(12, 30, 0, 0); 
+    end.setHours(13, 30, 0, 0);  
 
     return now >= start && now <= end;
 }
@@ -582,7 +576,7 @@ function trololo() {
 function mkHeroTable(hero) {
     
     const newPPseudo = document.createElement('td');
-    newPPseudo.innerText = trololo() && hero.pseudo.toLowerCase() == 'jekyll' ? 'Loïc' : hero.pseudo ;
+    newPPseudo.innerText = trololo() && hero.pseudo.toLowerCase() == 'loïc'  ? 'Jekyll' : hero.pseudo ;
     
     const newPScore = document.createElement('td');
     newPScore.innerText = hero.score ;
