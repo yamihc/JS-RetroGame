@@ -10,7 +10,8 @@ Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame
 
 ## Contenu
 
-03/11/2023 - Changement des dimensions du tetris, ajout d'une mécanique d'acceleration. Evolution du Snake, changement dans la gestion du resize, pas entièrement testée, potentiellement instable.
+11/12/2023 - Test rapide de Phaser JS avec vite pour un jeu Tron 2 joueurs.
+03/12/2023 - Changement des dimensions du tetris, ajout d'une mécanique d'acceleration. Evolution du Snake, changement dans la gestion du resize, pas entièrement testée, potentiellement instable.
 28/11/2023 - Première version du Tetris, fait en Preact avec TypeScript. Jouable, mais aucune option. 
 31/10/2023 - Mastermind v1, réglage des paramètres dans une modale, ajout des explications, localstorage automatique de la partie en cours
 16/10/2023 - Mastermind 0.85, la combinaison, n'est testé qu'à la validation du joueur, amélioration du CSS. Le code source du mastermind est diponible dans un dépot parent.
