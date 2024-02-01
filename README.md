@@ -10,6 +10,7 @@ Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame
 
 ## Contenu
 
+01/02/2024 - Tetris : responsive (normalement), plus d'info de jeu affichées, bientôt des setting.
 11/12/2023 - Test rapide de Phaser JS avec vite pour un jeu Tron 2 joueurs.
 03/12/2023 - Changement des dimensions du tetris, ajout d'une mécanique d'acceleration. Evolution du Snake, changement dans la gestion du resize, pas entièrement testée, potentiellement instable.
 28/11/2023 - Première version du Tetris, fait en Preact avec TypeScript. Jouable, mais aucune option. 
@@ -23,12 +24,10 @@ Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame
 
 ## Roadmap
 
-- ajout de fonctionnalité pour le tetris, présentation globale, score, affichage prochain tetramino, etc.
-- une version du tetris avec affichage via des composants à la place du canvas.
+- un projet Tron un peu plus construit.
 - refaire l'accueil du site en React/Preact MUI, avec l'ajout d'une section présentation/CV
 
-
-## code source des projets REACT
+## code source des projets 
 
 - Snake : https://github.com/yamihc/JS-RetroGame/tree/main/JS-Snake
 - MasterMind : https://github.com/yamihc/src_MasterMind.git
@@ -37,6 +36,7 @@ Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame
 
 ## A venir ?
 
+- une version du tetris avec affichage via des composants à la place du canvas
 - des modes de jeux pour le Snake, dans une version refaite de zéro
 - un quarto
 - une IA pour le quarto (algo MinMax)
