@@ -10,6 +10,7 @@ Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame
 
 ## Contenu
 
+06/02/2024 - Tetris : débugage setting + changement de vitesse + CSS setting
 05/02/2024 - Tetris : dimension grille de jeu paramétrable
 01/02/2024 - Tetris : responsive (normalement), plus d'info de jeu affichées, bientôt des setting.
 11/12/2023 - Test rapide de Phaser JS avec vite pour un jeu Tron 2 joueurs.
