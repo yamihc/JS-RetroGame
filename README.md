@@ -10,6 +10,7 @@ Le projet est hébergé par GitHub Pages @ https://yamihc.github.io/JS-RetroGame
 
 ## Contenu
 
+25/02/2024 - Tetris : v1.1.1, fix sur les grand nombre dans le localstorage (hghscore), et blocage de la rotation des cubes.
 13/02/2024 - Tetris : v1.1, responsive amélioré, combo dans le calcul du score, reset score.
 08/02/2024 - Tetris : release v1
 06/02/2024 - Tetris : débugage setting + changement de vitesse + CSS setting
